@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Counter() {
-  const [count, setCount] = React.useState(0);
+export default function Counter({ init }) {
+  const [count, setCount] = React.useState(init);
   return (
     <div>
       <h2>Counter</h2>

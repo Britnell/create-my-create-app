@@ -16,5 +16,8 @@
     "sourceType": "module"
   },
   "plugins": ["react", "import", "jsx-a11y"],
-  "rules": {}
+  "rules": {
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0
+  }
 }

@@ -1,8 +1,20 @@
-/* globals React,ReactDOM */
-// import React from "react";
-// import { ReactDOM } from "react";
+import React from "react";
 
 const App = () => {
-  return React.createElement("h1", {}, "Reactive");
+  const [count, setCount] = React.useState(0);
+  return (
+    <div>
+      <h1>App</h1>
+      <div>
+        <h2>Counter</h2>
+        <div>Count = {count}</div>
+        <div>
+          <button onClick={() => setCount(count - 1)}>-</button>
+          <button onClick={() => setCount(count + 1)}>+</button>
+        </div>
+      </div>
+    </div>
+  );
 };
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+
+export default App;

@@ -10,8 +10,11 @@
     }
   },
   "scripts": {
-    "dev": "parcel",
-    "build": "parcel build",
+    "build": "esbuild src/index.js --bundle --outfile=build/app.js --loader:.js=jsx",
+    "build:dev": "esbuild src/index.js --sourcemap --outfile=build/app.js --loader:.js=jsx",
+    "build:prod": "esbuild src/index.js --bundle --minify --outfile=build/app.js --loader:.js=jsx",
+    "build:script": "node ./build.cjs",
+    "dev": "node ./serve.cjs",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +22,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "esbuild": "^0.15.10",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",

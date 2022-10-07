@@ -6,8 +6,9 @@ const App = () => {
   return (
     <div>
       <h1>App</h1>
+      <p>With esbuild</p>
       <React.Suspense fallback={<div>Loading...</div>}>
-        <Counter init={7} />
+        <Counter init={0} />
       </React.Suspense>
     </div>
   );

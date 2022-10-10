@@ -24,6 +24,12 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        // to import images and fonts
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: "url-loader",
+        options: { limit: false },
+      },
     ],
   },
   plugins: [

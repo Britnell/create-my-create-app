@@ -1,5 +1,6 @@
-// import Counter from "./Counter";
 import React from "react";
+import "./style.scss";
+
 const Counter = React.lazy(() => import("./Counter"));
 
 const App = () => {
